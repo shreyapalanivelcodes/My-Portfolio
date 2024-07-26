@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://api.emailjs.com;">
+
+    <title>Shreya Palanivel - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .scroll-to-top.show {
+            display: block;
+        }
+        /* Additional custom styles can go here */
+    </style>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#tech">Technologies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#accomplishments">Accomplishments</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="Shreyapic.png" alt="Shreya Palanivel" class="profile-photo">
+        <h1>Shreya Palanivel</h1>
+        <p>~ Aspiring Web Developer</p>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello, I’m Shreya Palanivel, a second-year BSc Computer Science student at SIES College, Sion. With a solid year of practical experience in front-end development, I specialize in crafting compelling user experiences using design tools such as Inkscape and Figma. My programming skills are grounded in Java and Python, which allow me to address a variety of technical challenges with confidence.</p>
+        <p>During my time with the Google Developer Student Club (GDSC), I actively contributed to multiple projects, showcasing my commitment to collaboration and innovation. My leadership abilities have been instrumental in driving team success and fostering a creative work environment.</p>
+        <p>Outside of my academic pursuits, I continuously enhance my skills through online courses and internships, reflecting my dedication to professional growth and excellence in web development. I am eager to connect and explore collaborative opportunities to create impactful and innovative solutions together.</p>
+    </section>
+
+    <section id="tech">
+        <h2>Technologies</h2>
+        <ul>
+            <li><h3>Domains:</h3></li>
+            <li>Data Structures & Algorithms</li>
+            <li>Software Engineering</li>
+            <li>Operating Systems</li>
+            <li>UI/UX</li>
+            <li><h3>Languages & Frameworks:</h3></li>
+            <li>Python</li>
+            <li>Django</li>
+            <li>C</li>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li><h3>Developer Tools:</h3></li>
+            <li>Version Control Systems</li>
+            <li>VS Code</li>
+            <li>Inkscape</li>
+            <li>Figma</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><h3>Projects Using Java:</h3> Number Guessing Game</li>
+            <li>Quiz Game</li>
+            <li>To-Do List</li>
+            <li><h3>Projects Using Python:</h3> Calculator</li>
+            <li>Contact Book</li>
+            <li>Password Generator</li>
+            <li>Rock-Paper-Scissors Game</li>
+            <li>To-Do List</li>
+            <li><h3>Projects Using Basic Web Technologies:</h3> Stopwatch</li>
+            <li>Tic-Tac-Toe Game</li>
+            <li>Weather Telling App</li>
+            <li>Portfolio</li>
+            <li>Calculator</li>
+            <li>Currency Converter</li>
+            <li>Registration Form</li>
+            <li>Countdown Timer</li>
+        </ul>
+    </section>
+
+    <section id="accomplishments">
+        <h2>Accomplishments</h2>
+        <ul>
+            <li><h3>Certifications:</h3></li>
+            <li>Develop GenAI Apps with Gemini and Streamlit</li>
+            <li>Introduction to GenAI</li>
+            <li>Prompt Design in Vertex AI</li>
+            <li>GCCF</li>
+            <li>Postman API</li>
+            <li>Inkscape</li>
+            <li>Public Speaking</li>
+            <li><h3>Internships:</h3></li>
+            <li>1-month virtual internship programs at:</li>
+            <ul>
+                <li>Prodigy Infotech</li>
+                <li>TechnoHack Edutech</li>
+                <li>Codsoft</li>
+                <li>Bharat Intern</li>
+                <li>YBI Foundations</li>
+            </ul>
+            <li><h3>Personal Development:</h3></li>
+            <li>Efficiency in English, Hindi, Marathi & Tamil</li>
+            <li>Leadership Quality</li>
+            <li>Public Speaking</li>
+            <li>Project Management</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:shreyapalanivel2729@gmail.com">shreyapalanivel2729@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/shreyapalanivel2729" target="_blank">linkedin.com/in/shreyapalanivel2729</a></p>
+        <p>GitHub: <a href="https://github.com/shreyapalanivelcodes" target="_blank">github.com/shreyapalanivelcodes</a></p>
+        <p>Location: Mumbai, India</p>
+        <!-- Contact Form -->
+        <h3>Send Me a Message</h3>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <script>
+            emailjs.init("84L2VgS_QgwxrK2oT");
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_oyetr1b', 'template_3fa69tb', this)
+                    .then(function(response) {
+                        console.log('Success:', response);
+                        alert('Your message has been sent!');
+                    }, function(error) {
+                        console.log('Error:', error);
+                        alert('There was a problem sending your message.');
+                    });
+            });
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; All rights reserved.</p>
+    </footer>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Scroll to Top Button
+        window.onscroll = function() {
+            let scrollToTopButton = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
