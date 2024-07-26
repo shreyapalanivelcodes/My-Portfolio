@@ -1,0 +1,286 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f0f0, #dcd9f0, #1e3a8a, #4f46e5);
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1e3a8a;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #dcd9f0;
+}
+
+.hero {
+    margin: 60px auto 0; /* Adjusted for fixed header */
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid #dcd9f0;
+    transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #1e3a8a;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+a {
+    color: #4f46e5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #1e3a8a;
+  
+    text-align: center;
+    color: #fff; /* Changed to white */
+    position: fixed;
+    width: 100%;
+    height:7.1%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    color: #fff; /* Ensures all text in footer is white */
+}
+
+button {
+    background-color: #4f46e5;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+#contact {
+    padding: 20px;
+    background-color: #f4f4f9; /* Light background color */
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #003366; /* Dark blue color */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff; /* Background color for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #003366; /* Dark blue color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #002244; /* Slightly darker blue for hover effect */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+/* Additional Features */
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #faf5f5;
+    color: rgb(15, 9, 172);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background-color: #d9e0f3;
+}
+
+
+.scroll-to-top:hover {
+    background-color: #4f46e5;
+    transform: scale(1.1);
+}
